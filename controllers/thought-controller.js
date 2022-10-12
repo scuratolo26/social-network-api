@@ -58,10 +58,10 @@ const thoughtController = {
                 }
                 res.json(dbThoughtData);
             })
-            .catch(err => res.status9400).json(err);
+            .catch(err => res.status(400).json(err));
     },
     deleteThought({ params }, res) {
-        Thought.findOneAndDelete({ _id: parama.id })
+        Thought.findOneAndDelete({ _id: params.id })
             .then(dbThoughtData => {
                 if (!dbThoughtData) {
                     res.status(404).json({ message: 'No thoguht found with this id.' });
