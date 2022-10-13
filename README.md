@@ -1,4 +1,4 @@
-# social-network-api
+# Social Network Api
 Challenge 18
 
 ## Description
